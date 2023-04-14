@@ -1,0 +1,26 @@
+services:
+  front:
+    build: ./wild-book-ts
+    volumes:
+      - ./wild-book-ts/src:/app/src
+    ports:
+      - 3000:3000
+
+  api:
+    build: ./livecoding-node-typescript
+    volumes:
+      - ./livecoding-node-typescript/src:/app/src
+    ports:
+      - 5000:5000
+
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: replace_in_production
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

@@ -1,0 +1,22 @@
+GET http://localhost:5000/api/skills
+
+### Ajouter une compétence
+
+POST http://localhost:5000/api/skills
+Content-Type: application/json
+
+{
+  "name": "PHP"
+}
+
+### Modifier une compétence
+
+PUT http://localhost:5000/api/skills/2
+Content-Type: application/json
+
+{
+  "name": "Express.js"
+}
+
+### Supprimer une compétence
+DELETE http://localhost:5000/api/skills/1

@@ -1,0 +1,34 @@
+### List all Wilders
+GET http://localhost:5000/api/wilders
+
+### Get a Wilder by ID
+
+GET http://localhost:5000/api/wilders/1
+
+### Create a Wilder
+
+POST http://localhost:5000/api/wilders
+Content-Type: application/json
+
+{
+    "name": "René Girard",
+    "city": "Paris"
+}
+
+### Update a Wilder
+
+PUT http://localhost:5000/api/wilders/1
+Content-Type: application/json
+
+{
+    "city": "New York, USA"
+}
+
+### Delete a Wilder
+DELETE http://localhost:5000/api/wilders/2
+
+### Add skill to a Wilder
+POST http://localhost:5000/api/wilders/4/skills/10
+
+### Remove skill from a Wilder
+DELETE http://localhost:5000/api/wilders/5/skills/8
