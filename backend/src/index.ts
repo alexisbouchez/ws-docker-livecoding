@@ -6,7 +6,7 @@ import { WildersResolver } from "./resolvers/WildersResolver";
 const start = async (): Promise<void> => {
   await dataSource.initialize();
   const schema = await buildSchema({
-    resolvers: ["./src/resolvers/**.*.ts"],
+    resolvers: [WildersResolver],
   });
   const server = new ApolloServer({
     schema,

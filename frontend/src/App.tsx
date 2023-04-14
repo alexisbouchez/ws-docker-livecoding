@@ -8,7 +8,6 @@ import AddWilderForm from "./components/AddWilderForm";
 function App() {
   return (
     <WildersProvider>
-      <Header />
       <AddWilderForm />
       <WildersList />
       <Footer />
